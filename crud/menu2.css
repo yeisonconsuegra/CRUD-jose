@@ -1,0 +1,80 @@
+.container
+{
+	height: 644px;
+	width: 100%;
+}
+#div2
+{
+	width: 700px;
+	display: flex;
+	margin: auto;
+	border-radius: 10px;
+
+}
+#div3
+{
+	text-align: center;
+	margin: auto;
+	width: 700px;
+	margin-top: 40px;
+}
+img
+{
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	border-radius: 50%;
+	margin: 7px 6px;
+	background-color: transparent;
+}
+.lgris
+{
+	color: #000;
+	margin: 0 0 10px 0;
+	font-size: 20px;
+}
+.btn
+{
+	align-items: center;
+    padding: 8px 16px;
+    width: 40%;
+    margin: 10px 10px 8px 0;
+    cursor: pointer;
+    background-color: #ff8919;
+    border: 0px;
+
+}
+.btn:hover
+{
+    background-color: #ba5420; 
+
+}
+
+.btn1
+{
+  background-color: rgb(248, 238, 238);
+  color: rgb(233, 83, 83);
+  font-size: 15px;
+  font-weight: bold;
+  width: 40%;
+}
+#divconsulta
+{
+  width: 80%;
+  padding: 0;
+  border-style: solid;
+  border-width: thin;
+  border: 0px solid;
+  background-color: rgb(255, 255, 255);
+
+}
+#divconsulta2
+{
+  background-color: rgb(245, 245, 245);
+  font-size: 21px;
+  padding: 5px;
+  border-width: thin;
+  border: 1px solid #cccccc;
+  text-align: center;

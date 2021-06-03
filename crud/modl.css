@@ -1,0 +1,54 @@
+#div1
+{
+	width: 100%;
+	height: 600px;
+	padding: 0;
+	border-style: solid;
+	border-width: thin;
+	border: 0 solid;
+}
+.img1
+{
+	width: 100px;
+	height: 100px;
+	float: left;
+	padding: 0;
+}
+img
+{
+	width: 100px;
+	height: 100px;
+	margin: 0;
+
+}
+
+#div3
+{
+	height: 400px;
+	width: 70%;
+	text-align: center;
+	margin: auto;
+}
+#formulario
+{
+	height: 400px;
+	width: 70%;
+	text-align: center;
+	padding-top: 50px;
+	margin: auto;
+}
+.divformulario
+{
+	height: 250px;
+	width: 40%;
+	margin: auto;
+	background-color: #ff6719;
+}
+label
+{
+	color: #000;
+}
+._1
+{
+	margin-bottom: 20px;
+}

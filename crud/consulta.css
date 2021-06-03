@@ -1,0 +1,103 @@
+*
+{
+	margin: 0;
+}
+.container
+{
+	height: 600px;
+}
+img
+{
+	float: left;
+	width: 100px;
+	height: 100px;
+}
+#div2
+{
+	width: 100%;
+	height: 400px;
+	padding-top: 60px;
+}
+#div4
+{
+	margin: auto;
+	background-color: #ff6719;
+	position: relative;
+	z-index: 4;
+	width: 25%;
+	height: 190px;
+}
+form
+{
+	text-align: center;
+}
+strong
+{
+	color: #000;	
+	font-size: 17px;
+}
+.form-row
+{
+	height: 150px;
+	width: 300px;
+	margin: auto;
+}
+.form-group
+{
+	margin: 0 0 10px 0;
+}
+input
+{
+	padding: 2px;
+	border: 1px solid #000;
+}
+#divconsulta2
+{
+	text-align: center;
+	color: #fff;
+	padding: 0 3px 0 3px;
+	font-size: 17px;
+	border-radius: 17px;
+}
+#divconsulta3
+{
+	border-radius: 17px;
+	font-size: 15px;
+	text-align: center;
+	margin: auto;
+	color: #fff;
+}
+.col-md-12
+{
+	background-color: #ff6719;
+	width: 95%;
+	margin: auto;
+	height: 160px;
+	border-radius: 20px;
+	color: #000;
+	font-size: 15px;
+}
+table
+{
+	border: 1px solid #000;
+	font-size: 15px;
+	width: 95%;
+	margin: auto;
+	border-radius: 10px;
+}
+.lgris
+{
+	font-size: 17px;
+}
+table tr
+{
+	border: 1px solid #000;
+}
+table tr th
+{
+	border: 1px solid #000;
+}
+table tr th td
+{
+	border: 1px solid #000;
+}

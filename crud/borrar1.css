@@ -1,0 +1,76 @@
+*
+{
+	margin: 0;
+}
+.container
+{
+	height: 600px;
+}
+img
+{
+	float: left;
+	width: 100px;
+	height: 100px;
+}
+#div2
+{
+	width: 100%;
+	height: 400px;
+	padding-top: 60px;
+}
+#div4
+{
+	margin: auto;
+	background-color: #ff6719;
+	width: 25%;
+	height: 180px;
+}
+form
+{
+	text-align: center;
+}
+strong
+{
+	color: #000;	
+	font-size: 17px;
+}
+.form-row
+{
+	height: 150px;
+	width: 300px;
+	margin: auto;
+}
+.form-group
+{
+	margin: 0 0 10px 0;
+}
+input
+{
+	padding: 2px;
+	border: 1px solid #000;
+}
+#divconsulta2
+{
+	text-align: center;
+	color: #fff;
+	background-color: #ff7728c7;
+	padding: 0 3px 0 3px;
+	font-size: 17px;
+	border-radius: 17px;
+}
+.divconsulta3
+{
+	border-radius: 17px;
+	font-size: 15px;
+	text-align: center;
+	background-color: #ff6719;
+	margin: auto;
+	width: 39%;
+	font-size: 17px;
+	color: #000;
+}
+
+
+
+
+

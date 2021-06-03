@@ -1,0 +1,993 @@
+/* texto
+
+     vertical-align: super; {espefcifica que textos estaran elevados}
+     vertical-align: baseline; {los deja normal}
+     vertical-align: sub; {especifica que textos estaran un poco abajos}
+     vertical-align: -10px; {hace las funciones anteriores}
+
+     font-style: italic; {pone cursiva al texto}
+     font-style: normal; {lo deja normal todo}
+
+     text-align: justify; {pone el texto como tipo periodico}
+     text-indent: 160px; {indica donde comenzara en texto}
+     text-transform: capitalize; {coloca la primera letra de todos los textos en mayuscula}
+     text-transform: uppercase; {coloca todo el mayuscula}
+     text-transform: lowercase; {coloca todo en miniscula}
+     letter-spacing: 20px; {coloca un espacio por cada letra en un parrafo}
+     letter-spacing: normal; {lo deja normal}
+     word-spancing: 30px; {coloca un espacio por cada palabra en un texto}
+     font-family: arial; {tipo de letra}
+     font-weight: 100-900; {grosor de letra}
+     font-size: 20px; {tamaño de letra}
+     line-height: 100px; {tipo de altura de una linea}
+     border-style: solid;
+                   dotted
+                   dashed
+                   double
+                   groove
+                   rigde
+                   inset
+                   outset
+                   hidden
+     border-top-style: 2px; {especifica donde colocar los bordes}
+     overflow: outo; {lo que sale de la caja lo acomoda dentro y le pone barra si es necesaria}
+     overflow: scroll; {pone la barra de scroll aunque no sea necesario}
+     overflow: hidden; {se recorta el desbordamiento, y el resto del contenido quedara invisible}
+     overflow: {tambien funciona con las imagenes}
+  */
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  background
+  /*
+
+  background-clip: content-box;
+                   border-box;
+                   padding-box;
+  */
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+/* cajas
+
+     display: flex; {si tenemos un bloque contenedor y dentro de ese hay mas div y queremos
+                     que se pongan uno al lado de otro hacemos esto. 
+                     hace que las cajas se posicionen una al lado de la otra}
+     flex-direction: row; {coloca las cajas del contenedor en filas}
+     flex-direction: row-reverse; {coloca la fila al revez como se fuera un espejo}
+     flex-direction: colum; {afecta a todas las cajas que hay dentro del contenunedor y las coloca como columnas}
+     flex-direction: colum-reverse; {coloca la columna alrevez como si fuera espejo}
+     flex-wrap: wrap; {hace que cuando el viewport se achique, las cajas bajen}
+     flex-wrap: wrap-reverse; {en vez de que las cajas bajen, se colocan arriba}
+     flex-wrap: nowrap; {todo normal}
+     justify-content: center; {centra el contenido o las cajas dentro del contenedor}
+     justify-content: space-around; {es como margin auto, afecta a todas las cajas dentro de un contenedor}
+     justify-content: space-between; {le dá un margin automatico a todas las cajas del contendor por igual,
+                                       como un espacio hasta donde llegue.}
+     justify-content: space-evenly; {iguala todos los espacios a las filas de todas las cajas del contenedor}
+     align-items: stretch; {deja todo normal, afecta a todas las cajas del contenedor, el align item solo se 
+                            usa para una linea} 
+     align-items: flex-start; {deja el contenido arriba, sea ajusta la caja al contenido}
+     align-items: center; {centra las cajas verticalmente}
+     align-items: flex-end; {las coloca al final, es decir, abajo del viewport}
+     align-items: baseline; {hace que las cajas bajen al final de viewport cuando este se redusca}
+     align-content: start, center, end; {las mismas propiedades se utilizan y tambien para agrupar las lineas de
+                                          cajas}
+     align-content: baseline; {se utiliza cuando al momento de reducir el viewport las cajas bajen hasta el fondo
+                               y con wrap-reverse las cajas se agrupen y nó se separen}
+     flex-grow: 1; {el espacio que quede de la linea de las cajas, las reparte a todas haciendo que cuando 
+                     viewport se espanda o contraiga, las cajas tambieen lo hagan quedando en la misma linea,
+                     tambien cuando le colocamos un minimo de wid no se contrae y queda normal pero cuando lo 
+                     expandimos tambien se espande y le podemos colocar tambien un max wid, si se la colocamos
+                     a una caja entoncess esa caja toma todo es espacio que sobra.}
+     flex-basis: 300px; {es como el width pero este tiene la prioridad, es mas importante}
+     flex-shrink: 2; {nos permite elejir que caja va a ceder mas espacio cuando no alcanse el lugar disponible,
+                       entre mas shrink tenga mas espacio cede}
+     resize: none; {se utiliza en el textotarea para que no se expanda}
+     order: 3; {es como z index pero hace que cuando los elemento vayan hacia la derecha el primero de ellos
+                pase a ser el ultimo y el ultimo al primero}
+     background-color: #a22; {color de fondo}
+     display: inline-block; {le quita el bloque al texto}
+     padding: 100px; {es la distancia de la caja y el texto}
+     box-sizing: border-box; {hace fijar el wid y heig sin ser alterados por padding}
+     text-align: center; {alinea el texto en el centro}
+     margin: 10px 20px; {espacio que va fuera de la caja}
+     border-radius: 50%; {redondea las puntas con px y con % lo redondea completamente}
+     border-radius: 0px 23px 12px 4px;  {especifica las esquinas que tipo de borde tendran}
+     border: 10px solid blue; {coloca borde a la caja, tipo y color}
+     box-shadow: 20px 10px 30px 15px; {sombra a la caja, al costado derecha, abajo, desenfoque, cuanto borde tendrá}
+     box-shadow: inset 20px 10px 5px #888888;  {"inset" nos permite agregar sombra en la parte de adentro de la caja}
+     box-shadow: inset 8px 8px 3px #000, inset -5px -5px 3px #000; {esto hace que las sombras sean para todos los lados}
+     text-shadow: 30px 10px 15px #000; {sombra al texto, si se duplican los valores serán mas intensos}
+     text-shadow: 5px 10px 2px #93968f, -3px 6px 5px #58d1e3; {hace que haya como el reflejo de las letras debajo
+                                                               de la original}
+     opacity: 0.3; {va de 0-1}
+
+  */
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  filter
+  /*
+  .dropshadow {
+    filter: drop-shadow(5px 9px 2px blue);
+    -webkit-filter: drop-shadow(5px 9px 2px blue);         {es como una sombra a la imagen}
+}
+
+    Los valores positivos crean la sombra a la 
+    derecha y debajo de la imagen.
+    Los valores negativos de ancho y alto 
+    crean la sombra arriba y a la izquierda de la imagen.
+
+
+    filter: contrast(140%); {hay muchas mas funciones que sirven para las imagenes}
+
+  */
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+   transform
+ /*
+  
+  div {
+    width: 200px;
+    height: 100px;
+    margin-top: 30px;                       {es un rectangulo inclinado a 10 grados, tambien con valor negativos}
+    background-color: #32CD32;
+    transform: rotate(10deg);
+    -webkit-transform: rotate(10deg);
+
+
+    translate()
+
+    div {
+    padding: 50px;
+    position: absolute;                            {mueve la caja en varias posiciones en el viewport, como si
+    background-color: #32CD32;                      fuese position, tabien admite valor negativo para subir}
+    transform:translate(100px, 50px);
+    -webkit-transform:translate(100px, 50px);
+
+
+    https://api.sololearn.com/DownloadFile?id=2711      {ejemplo}
+}
+}
+
+
+
+  scale()
+
+  div.second {
+    margin: 60px;
+    width: 200px;
+    height: 100px;
+    background-color: #8bc34a;                {es como el widght y height pero este al agrandar la caja se agranda
+    transform: scale(1.5,1.5);                  el contenido tambien para dejarlo como si fuera original}
+    -webkit-transform: scale(1.5,1.5);
+    color:white;
+}
+
+
+
+  rotateY,X,Z
+
+  div.empty-div {
+    position: relative;
+    height: 200px;
+    width: 200px;
+    margin: 30px;
+    padding: 10px;
+    border: 1px solid black;
+    perspective: 100px;
+    -webkit-perspective: 100px;                 {lo coloca como si estuvise acostado}
+}
+div.green-div {
+    padding: 60px;
+    position: absolute;
+    background-color: #8bc34a;
+    border: 1px solid white;
+    transform: rotateX(45deg);
+    -webkit-transform: rotateX(45deg);
+}
+
+ */
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  @font-face
+  /*
+  https://api.sololearn.com/DownloadFile?id=2685
+  */
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  gradiends
+  /*
+  background:-webkit-linear-gradient(colores); {degradado de abajo hacia arriba}
+  background:-webkit-radial-gradient(circle,colores);  {degradado en circulo}
+  background:-webkit-radial-gradient(a,d,a,i,colores);  {podemos direccionar el gradient}
+  background:-webkit-radial-gradient(bottom left,colores); {lo podemos hacer mas especificos}
+  background:-webkit-radial-gradient(100deg, colores); {lo podemos hacer con grados}
+  background:-webkit-repeating-radial-gradient(100deg, colores); {hace como varias lineas una debajo de la otra}
+
+  */
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  @keyframes
+  /*
+  
+  div {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: colorchange;
+    animation-duration: 0.5s;
+    -webkit-animation-name: colorchange;        {hace que cambie de color cada tiempo estimado}
+    -webkit-animation-duration: 0.5s;  
+    -webkit-animation-iteration-count: infinite;    {hace que dure de manera infinita}          
+}
+@keyframes colorchange {
+    from { width: 0px; }      {el "from" es como si fuese 0% y "to" es como un hasta}
+    to { width: 100px; }
+}
+@keyframes colorchange {
+    0% {background-color: red; }
+    50% {background-color: green; }
+    100% {background-color: blue; }
+}
+
+La propiedad "animation-name" especifica la animación que se utilizará para el elemento.
+La propiedad "animation-duration" especifica la duración de la animación seleccionada.
+
+  */
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  -webkit-
+ /*
+
+https://api.sololearn.com/DownloadFile?id=2665
+
+especifica que es adaptable al tipo de navegador y sea soportado.
+
+ */
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  /*  grid
+
+      display: grid; {Es como una tabla, pero se utiliza para lograr diseños diferentes a una pagina}
+      grid-template-columns: 150px 150px 1fr; {Definimos que grandes seran los cuadros y el (1fr) funciona como 
+                                                como el grow que se estira los elementos en este caso una parte
+                                                de la tabla}
+      grid-template-rows: 150px 150px 250px; {Definimos que grandes seran las filas}
+      grid-template-columns: repeat(4,150px) 1fr; {es una froma abreviada que indica que hayan 4 cajas de 150px.}
+      grid-gap: 20px; {Es el espacio de entre las celdas, pero no se separa de los bordes del contenedor}
+      grid-row-gap: 20px; {solo le da espacio a las filas}
+      grid-column-gap: 20px; {solo le da espacio a las columnas}
+      grid-row(colmun): 1/3; {nos indica cuanto espacio vamos a usar desde que caja a que caja(eso se hace contando las lineas )}
+      grid-row(colum)-start: 1; {es lo mismo como el de arriba pero por separado}
+      grid-row(colum)-start: 3; {es lo mismo como el de arriba pero por separado}
+      grid-row(colmun): 1/ span 3; {con el span ya no tenemos necesidad de contar las lineas, solo ponemos
+                                    span y el numero de desplazamiento ya sea en columnas o filas, es mas facil}
+      grid-auto-flow: column(row); {ya sea que una fila o colmuna no tenga definiciones, podemos convertir una fila en 
+                                     en columna y viceversa}
+      grid-auto-columns(rows): 150px; {le decimos tanto a todas las filas como columnas que tengan tanta cantidad de pixeles}
+      grid-auto-flow: dense; {se utiliza para rellenar los espacios que quedan en blanco, con los mismos items}
+      grid-template-columns(rows): repeat(3, minmax(100px, 300px)); {al momento de reducir o expandir en viewport que en 
+                                                                      un minimo y max de pixeles}
+      grid-template-columns: repeat(auto-fill, minmax(100px, 100px)); {el auto-fill nos sirve para cuando se expanda 
+                                                                        el viewport las filas de las celdas se coloque
+                                                                        una al lado de la la otra hasta no poder mas,
+                                                                        tambien funciona cuando hay 3 o 4 elementos.}
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); {el auto-fit sirve para practicamente dejar todo normal,
+                                                                    no estoy seguro de eso.}
+  */
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+ /*  imagenes
+
+     background-image: url("nombre"); {para colocar una imagen}
+     background-size: 100%; {coloca la imagen en toda la pantalla}
+     background-image: url("nombre", "nombre"); {para meter mas separar con coma}
+     background-position: right top, left top; {cambia la posicion de la imagen de fondo}
+     padding: 30px;
+     color: white;
+     background-repeat: repeat-x; {repite la imagen horizontalmente}
+     background-repeat: repeat-y; {repite la imagen verticalmente}
+     background-repeat: no-repeat; {lo coloca normal}
+     background-attachment: fixed; {fija la imagen mientras se desplaza hacia abajo}
+     background-attachment: scroll; {la imagen se desplaza con el resto del contenido}
+     object-fit: contain; {hace que las resoluciones de la imagen se ajusten al contenido, si el contenedor
+                           tiene 100px y ma imagen 50px se ajusta colocandose en el medio y dejando arriba 25 y abajo 25
+                           no rellena los espacios del contenedor}
+     object-fit: cover; {la imagen se ajusta al contenedor y recorta los demas bordes}
+     object-fit: none; {hace que la imagen quede como la original no importa si el contenedor sea mas grande o pequeña
+                        que la imagen, la imagen no cambiará su tamaño original}
+     object-fit: scale-down; {se queda con la resolucion mas chica ya sea contain o none}
+     object-position: a,d,a,i; {mueve la imagen dentro de los contendores si la imagen es grande y no se ve, hacemos eso
+                               para que se mueva}
+
+ */
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+ /*  OCULTAR ELEMENTOS
+
+     display: none; {oculta el elemento con su contenido y no ocupa un espacio}
+     visibility: hidden; {oculta el elemento y deja el espacio que ocupa ese elemento}
+     visibility: visible; {hace el contenido visible}
+
+
+ */
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+ /* tipos de listas
+
+    list-style-type: lower-alpha; {coloca las listas en a,b,c}
+    list-style-type: circle; {coloca las listas en circulistos}
+    list-style-type: square; {coloca las listas en cuadritos}
+    list-style-type: none; {le quita los puntos y la deja sin nada}
+
+ */
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+ /*  margin: auto; {para centrar la caja} */
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ /*  positio: relative; {mueve la caja en top y left porque son reyes, bottom y right no pueden ganarle
+                         pero si top y left no estan, entonces si funcionaran, sin desordenar las otras cajas}
+     top: 20px; {tambien puedes colocar -30 para posicionar mejor}
+     left: 20px;
+     z-index: 20; {hace que la caja se posicione encima de las demas(es recomendable darle valores altos 
+                    por si haya que colocar una nueva)}
+
+     position: absolute; {especifica el desplazamiento desde los bordes del bloque contenedor del elemento
+                          (un bloque dentro de otro bloque hacia una esquina) tambien los elementos en bloques
+                          quedan reducidos al tamaño del texto, y si hay espacios reservados entonces las cajas 
+                          tomaran su lugar. hay que tener en cuenta que si el elemento padre tiene un position
+                          relative este se ajustara en ese contendor pero si no lo tiene, buscara uno para que 
+                          se mueva a lo que le colocamos y seria el body.}
+     position: fixed; {fija el elemento y si es en caso de paginas entonces fija el elemento en la pantalla mientras
+                       se desplaza hacia abajo}
+     position: sticky; {es como si fuera como los otros bloques en su posicion, pero cuando al momento de desplazar 
+                        hacia abajo y tocamos el limite de su caja, entonces queda como si fuera fijo mientras se desplaza
+                        hacia abajo}
+*/
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+/* float
+
+   float:a,d,a,i; {empereja los bloques y nó deforma sus cajas}
+
+*/
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ /*  form
+
+     <input type="text" placeholder="example@.com (va dentro de la cajilla)">
+     input::placeholder {}; {con css para modificar dentro de la cajila}
+ */
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ /*  pseudo elementos o etiquetas
+
+     ::first-line{} {elije la primera linea a modificar}
+     ::first-letter{} {elije la primera letra del parrafo a modificar}
+     ::selection{} {no permite modificar el contenido dentro de la caja pero si se 
+                    modica el color del sombreado del texto}
+     ::before{
+      content: "te suscribes"; {escribe antes del contenido que ya estaba escrito (content es importante) }
+     }
+
+     te suscribes <p> a mi </p> canal
+
+     ::after{
+       content: "canal"; {escribes despues de lo que estaba escrito (content es importante)}
+     }
+ */
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ /*  pseudo clases con un solo (:)
+
+     :hover{} {cuando el mouse esté encima, ocurrirá este efecto}
+     :link{} {especifica un color a los links que no han sidos visitados}
+     :visited{} {especifica un color a los links que han sidos visitados}
+     :active{} {al momento de dar click a algo cambie ya sea de color etc, pero cuando se deje 
+                presionar vuelve a su estado de normalidad(tambien puede tener transition)}
+     :focus{} {solo sirve para los input algo muy párecido al active}
+     :nth-child(2) {sirve para elejir el segundo elemento}
+
+ */
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ transition
+ /*
+  div {
+    width: 50px;
+    height: 50px;
+    background: #32CD32;
+    transition: width 3s;
+    -webkit-transition: width 1s;         {si el mouse esta encima aparece la transicion}
+}
+div:hover {
+    width: 250px;
+}
+ */
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+ /* .class {por clase}
+    #id {por id}
+    [valor:"atributo"] {por atributos}
+    div {por elementos}
+    h2 a spam {especificar donde alterar}
+
+ */
+
+
+ PHP OPP
+
+/*
+
+class frutas {
+  //propiedades
+  public $color;
+  public $name;       //los obejetos llaman a las propiedades ->
+
+
+  //metodos
+  function set_name($name) {
+    $this->name = $name;       //aqui estamos diciendo que guardaremos en "name" lo que el usuario mete en "$name"
+  }
+                                        //los objetos usan los metodos ->
+  function get_name() {
+    return $this->name;
+  }
+
+  function set_color($color) {
+    $this->color = $color;    //aqui estamos diciendo que guardaremos en "color" lo que el usuario mete en "$color"
+  }                                  
+
+  function get_color() {
+    return $this->color;
+  }
+}
+
+$manzana = new frutas();        //creamos el objeto
+$manzana->set_name('manzana');   //llamamos a la function por medio -> y le asignamos el valor
+$manzana->set_color('red');      //viceversa
+
+echo 'nombre: '. $manzana->get_name();    //llamamos a la Function que nos dice que imprima es name
+echo '<br>';
+echo 'color: '. $manzana->get_color();    //viceversa
+
+*/
+
+CONSTRUCT
+/*
+
+Al instanciar la clase el metodo se ejecuta al comienzo de manera automatica.
+
+
+<?php
+class Fruit {
+  public $name;
+  public $color;
+
+  function __construct($name) {   //El construct comienza con dos __
+    $this->name = $name;
+  }
+  function get_name() {
+    return $this->name;
+  }
+}
+
+$apple = new Fruit("Apple");     //El contruct hace que inicie los valores en la entrada de la creacion del objeto
+echo $apple->get_name();
+?>
+
+
+*/
+DESTRUCT
+/*
+
+ PHP llamará automáticamente a esta función al final del script.
+
+ <?php
+class Fruit {
+  public $name;
+  public $color;
+
+  function __construct($name, $color) {
+    $this->name = $name;
+    $this->color = $color;
+  }
+  function __destruct() {
+    echo "The fruit is {$this->name} and the color is {$this->color}.";    //al final se ejecuta esta funcion
+  }
+}
+
+$apple = new Fruit("Apple", "red");         //como siempre se ejecuara destruct no se pone mas nada 
+?>
+
+*/
+NOTA: como los constructores y destructores ayudan a reducir la cantidad de código, ¡son muy útiles!
+
+ejemplos de los dos
+/*
+
+class frutas {
+
+  public $nombre;
+  public $color;
+
+  public function __construct($nombre,$color) {
+    $this->nombre = $nombre;
+    $this->color = $color;
+  }
+  public function __destruct() {
+    echo "El nombre de la fruta es : {$this->nombre} <br>";
+    echo "El color de la fruta es: {$this->color}";
+  }
+}
+ 
+ $manzana = new frutas('manzana', 'red');
+
+?>
+
+*/
+
+public, private, protected
+/*
+
+public: Se puede acceder a la propiedad o al método desde cualquier lugar. Esto es predeterminado
+
+protected: se puede acceder a la propiedad o método dentro de la clase y por clases derivadas de esa clase
+
+private: SOLO se puede acceder a la propiedad o método dentro de la clase
+
+
+EJEMPLO
+
+
+<?php
+class Fruit {
+  public $name;
+  protected $color;
+  private $weight;
+}
+
+$mango = new Fruit();
+$mango->name = 'Mango'; // OK
+$mango->color = 'Yellow'; // ERROR
+$mango->weight = '300'; // ERROR
+?>
+
+*/
+ejemplo 2
+/*
+En el siguiente ejemplo, hemos agregado modificadores de acceso a dos métodos. 
+Aquí, si intenta llamar a la función set_color () o set_weight (), resultará 
+en un error fatal (porque las dos funciones se consideran protegidas y privadas), 
+incluso si todas las propiedades son públicas:
+
+*/
+le sigue
+/*
+
+<?php
+class Fruit {
+  public $name;
+  public $color;
+  public $weight;
+
+  function set_name($n) {  // a public function (default)
+    $this->name = $n;
+  }
+  protected function set_color($n) { // a protected function
+    $this->color = $n;
+  }
+  private function set_weight($n) { // a private function
+    $this->weight = $n;
+  }
+}
+
+$mango = new Fruit();
+$mango->set_name('Mango'); // OK
+$mango->set_color('Yellow'); // ERROR
+$mango->set_weight('300'); // ERROR
+?>
+
+*/
+HERENCIA
+/*
+
+La clase secundaria heredará todas las propiedades y 
+métodos públicos y protegidos de la clase principal. 
+Además, puede tener sus propias propiedades y métodos.
+
+Una clase heredada se define mediante la "extends" palabra clave.
+
+*/
+ejemplo
+/*
+
+class Fruit {
+  public $name;
+  public $color;
+  public function __construct($name, $color) {
+    $this->name = $name;
+    $this->color = $color; 
+  }
+  public function intro() {
+    echo "La fruta es {$this->name} y el color es {$this->color}."; 
+  }
+}
+
+// La strawberry se hereda de la fruit
+class Strawberry extends Fruit {
+  public function message() {
+    echo "¿Soy una fruta o una baya? "; 
+  }
+}
+
+$strawberry = new Strawberry("mango", "verde");
+$strawberry->message();
+$strawberry->intro();
+
+
+//¿Soy una fruta o una baya?  La fruta es mango y el color es verde.
+
+?>
+
+
+EXPLICACION
+
+La clase Strawberry se hereda de la clase Fruit.
+
+Esto significa que la clase Strawberry puede usar las 
+propiedades public $ name y $ color, así como los métodos 
+públicos __construct () e intro () de la clase Fruit debido a la herencia.
+
+La clase Strawberry también tiene su propio método: message ().
+*/
+herencia y el modificador de acceso protegido
+/*
+
+<?php
+class Fruit {
+  public $name;
+  public $color;
+  public function __construct($name, $color) {
+    $this->name = $name;
+    $this->color = $color;
+  }
+  protected function intro() {
+    echo "The fruit is {$this->name} and the color is {$this->color}.";
+  }
+}
+
+class Strawberry extends Fruit {
+  public function message() {
+    echo "Am I a fruit or a berry? ";
+  }
+}
+
+// Try to call all three methods from outside class
+$strawberry = new Strawberry("Strawberry", "red");  // OK. __construct() is public
+$strawberry->message(); // OK. message() is public
+$strawberry->intro(); // ERROR. intro() is protected
+?>
+
+*/
+otro ejemplo
+/*
+
+En el ejemplo anterior vemos que si intentamos llamar a un 
+protected método (intro ()) desde fuera de la clase, recibiremos 
+un error. public ¡Los métodos funcionarán bien!
+
+
+
+<?php
+class Fruit {
+  public $name;
+  public $color;
+  public function __construct($name, $color) {
+    $this->name = $name;
+    $this->color = $color;
+  }
+  protected function intro() {
+    echo "The fruit is {$this->name} and the color is {$this->color}.";
+  }
+}
+
+class Strawberry extends Fruit {
+  public function message() {
+    echo "Am I a fruit or a berry? ";
+    // Call protected method from within derived class - OK
+    $this -> intro();
+  }
+}
+
+$strawberry = new Strawberry("Strawberry", "red"); // OK. __construct() is public
+$strawberry->message(); //OK. message () es público y llama a intro () (que está protegido) 
+                           desde dentro de la clase derivada
+
+*/
+anulacion de metodos heredados
+/*
+
+Los métodos heredados se pueden anular redefiniendo 
+los métodos (use el mismo nombre) en la clase secundaria.
+
+Mira el ejemplo de abajo. Los métodos __construct () e intro () en la clase 
+secundaria (Strawberry) anularán los métodos __construct () e intro () en la clase principal (Fruit):
+
+*/
+ejemplo
+/*
+
+<?php
+class Fruit {
+  public $name;
+  public $color;
+  public function __construct($name, $color) {
+    $this->name = $name;
+    $this->color = $color;
+  }
+  public function intro() {
+    echo "The fruit is {$this->name} and the color is {$this->color}.";
+  }
+}
+
+class Strawberry extends Fruit {
+  public $weight;
+  public function __construct($name, $color, $weight) {
+    $this->name = $name;
+    $this->color = $color;
+    $this->weight = $weight;
+  }
+  public function intro() {
+    echo "The fruit is {$this->name}, the color is {$this->color}, and the weight is {$this->weight} gram.";
+  }
+}
+
+$strawberry = new Strawberry("Strawberry", "red", 50);
+$strawberry->intro();
+?>
+
+*/
+la palabra clave final
+/*
+La final palabra clave se puede utilizar para evitar la 
+herencia de clases o para evitar la invalidación de métodos.
+
+El siguiente ejemplo muestra cómo evitar la herencia de clases:
+*/
+ejemplo
+/*
+
+<?php
+final class Fruit {
+  // some code
+}
+
+// will result in error
+class Strawberry extends Fruit {
+  // some code
+}
+?>
+
+*/
+evitar la invalidacion del metodo
+/*
+
+<?php
+class Fruit {
+  final public function intro() {
+    // some code
+  }
+}
+
+class Strawberry extends Fruit {
+  // will result in error
+  public function intro() {
+    // some code
+  }
+}
+?>
+
+*/ 
+CONSTANTES DE CLASE
+/*
+
+Las constantes no se pueden cambiar una vez que se declaran.
+
+Las constantes de clase pueden ser útiles si necesita definir algunos datos constantes dentro de una clase.
+
+Una constante de clase se declara dentro de una clase con la const palabra clave.
+
+Las constantes de clase distinguen entre mayúsculas y minúsculas. Sin embargo, se recomienda nombrar las 
+constantes en letras mayúsculas.
+
+Podemos acceder a una constante desde fuera de la clase usando el nombre de la clase seguido del 
+operador de resolución de alcance ( ::) seguido del nombre de la constante, como aquí:
+
+*/
+ejemplo
+/*
+
+<?php
+class Goodbye {
+  const LEAVING_MESSAGE = "Thank you for visiting W3Schools.com!";
+}
+
+echo Goodbye::LEAVING_MESSAGE;
+?>
+
+*/
+opcion 2
+/*
+
+O podemos acceder a una constante desde dentro de la 
+clase usando la selfpalabra clave seguida del operador 
+de resolución de alcance ( ::) seguido del 
+nombre de la constante, como aquí:
+
+<?php
+class Goodbye {
+  const LEAVING_MESSAGE = "Thank you for visiting W3Schools.com!";
+  public function byebye() {
+    echo self::LEAVING_MESSAGE;
+  }
+}
+
+$goodbye = new Goodbye();
+$goodbye->byebye();
+?>
+
+*/
+
+CLASES ABSTRACTAS
+/*
+
+Las clases y métodos abstractos son cuando la clase padre tiene un método con 
+nombre, pero necesita su (s) clase (s) hijo (s) para completar las tareas.
+
+Una clase abstracta es una clase que contiene al menos un método abstracto. 
+Un método abstracto es un método que se declara, pero no se implementa en el código.
+
+Una clase o método abstracto se define con la "abstract" palabra clave:
+
+*/
+ejemplo
+/*
+
+<?php
+abstract class ParentClass {
+  abstract public function someMethod1();
+  abstract public function someMethod2($name, $color);
+  abstract public function someMethod3() : string;
+}
+?>
+
+*/
+explicacion de abstract
+/*
+
+Cuando se hereda de una clase abstracta, el método de la clase secundaria debe definirse 
+con el mismo nombre y el mismo modificador de acceso o uno menos restringido. Por lo tanto, 
+si el método abstracto se define como protegido, el método de la clase secundaria debe 
+definirse como protegido o público, pero no privado. Además, el tipo y el número de argumentos 
+requeridos deben ser los mismos. Sin embargo, las clases secundarias pueden tener además argumentos opcionales.
+
+Entonces, cuando una clase secundaria se hereda de una clase abstracta, tenemos las siguientes reglas:
+
+El método de la clase secundaria debe definirse con el mismo nombre y vuelve a declarar el método abstracto principal.
+El método de la clase secundaria debe definirse con el mismo modificador de acceso o con uno menos restringido.
+El número de argumentos requeridos debe ser el mismo. Sin embargo, la clase secundaria puede 
+tener argumentos opcionales además
+Veamos un ejemplo:
+
+*/
+ejemplo
+/*
+
+<?php
+// Parent class
+abstract class Car {
+  public $name;
+  public function __construct($name) {
+    $this->name = $name;
+  }
+  abstract public function intro() : string;
+}
+
+// Child classes
+class Audi extends Car {
+  public function intro() : string {
+    return "Choose German quality! I'm an $this->name!";
+  }
+}
+
+class Volvo extends Car {
+  public function intro() : string {
+    return "Proud to be Swedish! I'm a $this->name!";
+  }
+}
+
+class Citroen extends Car {
+  public function intro() : string {
+    return "French extravagance! I'm a $this->name!";
+  }
+}
+
+// Create objects from the child classes
+$audi = new audi("Audi");
+echo $audi->intro();
+echo "<br>";
+
+$volvo = new volvo("Volvo");
+echo $volvo->intro();
+echo "<br>";
+
+$citroen = new citroen("Citroen");
+echo $citroen->intro();
+?>
+
+*/
+ejemplo explicado
+/*
+
+Las clases Audi, Volvo y Citroen se heredan de la clase Coche. 
+Esto significa que las clases Audi, Volvo y Citroen pueden usar la propiedad
+public $ name así como el método público __construct () de la clase Car debido a la herencia.
+
+Pero, intro () es un método abstracto que debe definirse en 
+todas las clases secundarias y deben devolver una cadena.
+
+*/
+Más ejemplos de clases abstractas
+/*
+
+<?php
+abstract class ParentClass {
+  // Método abstracto con un argumento
+  abstract protected function prefixName($name);
+}
+
+class ChildClass extends ParentClass {
+  public function prefixName($name) {
+    if ($name == "John Doe") {
+      $prefix = "Mr.";
+    } elseif ($name == "Jane Doe") {
+      $prefix = "Mrs.";
+    } else {
+      $prefix = "";
+    }
+    return "{$prefix} {$name}";
+  }
+}
+
+$class = new ChildClass;
+echo $class->prefixName("John Doe");
+echo "<br>";
+echo $class->prefixName("Jane Doe");
+?>
+
+*/
+otro ejemplo
+/*
+
+Veamos otro ejemplo en el que el método abstracto tiene un 
+argumento y la clase secundaria tiene dos argumentos opcionales 
+que no están definidos en el método abstracto del padre:
+
+
+
+<?php
+abstract class ParentClass {
+  // Método abstracto con un argumento
+  abstract protected function prefixName($name);
+}
+
+class ChildClass extends ParentClass {
+  // La clase secundaria puede definir argumentos opcionales que no están en el método abstracto de los padres.
+  public function prefixName($name, $separator = ".", $greet = "Dear") {
+    if ($name == "John Doe") {
+      $prefix = "Mr";
+    } elseif ($name == "Jane Doe") {
+      $prefix = "Mrs";
+    } else {
+      $prefix = "";
+    }
+    return "{$greet} {$prefix}{$separator} {$name}";
+  }
+}
+
+$class = new ChildClass;
+echo $class->prefixName("John Doe");
+echo "<br>";
+echo $class->prefixName("Jane Doe");
+?>
+*/
